@@ -1,19 +1,28 @@
 {
-    "name": "pokeapi",
-    "version": "1.0.0",
-    "description": "",
-    "main": "server.js",
-    "dependencies": {
-        "axios": "^0.21.1",
-        "body-parser": "^1.19.0",
-        "express": "^4.17.1",
-        "nodemon": "^2.0.6"
-    },
-    "devDependencies": {},
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node server.js"
-    },
-    "author": "Marco Alfaro",
-    "license": "ISC"
+  "name": "pokeapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.6"
+  },
+  "devDependencies": {
+    "husky": "^4.3.6",
+    "prettier": "^2.1.2",
+    "pretty-quick": "^3.0.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "Marco Alfaro",
+  "license": "ISC"
 }
